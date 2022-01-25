@@ -3,8 +3,10 @@ import "./login.css";
 import useLoginForm from "./useLoginForm";
 import validateInfo from './validate';
 import {Icon} from "@iconify/react";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate=useNavigate();
     const {values,handleChange,handleSubmit,errors}=useLoginForm(validateInfo);
     return (
         <div className='login_page'>
@@ -43,7 +45,7 @@ const Login = () => {
                 </div>
                 <button type="submit"
                 className="login_Submit">Sign In</button>
-                <p className='register_Switch'>Dont have a Account?<a href="/Register">Register</a></p>
+                <p className='register_Switch'>Dont have a Account?<button onClick={()=>navigate("/register")}>Register</button></p>
                 </form>
         </div>
     )

@@ -36,7 +36,7 @@
 }
 
 .logo{
-    margin-top: 40px;
+    margin-top: 10px;
     width: 80px !important;
     height: 80px !important;
     color: #39B54A;
@@ -52,7 +52,7 @@
 }
 
 .register_Input{
-    width: 100%;
+    width: 90%;
     position: relative;
     justify-content: center;
     margin-left: 8%;
@@ -61,7 +61,7 @@
 .register_Inputfields{
     width: 73%;
     height: 10px;
-    padding:25px 40px;
+    padding:20px 40px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
@@ -76,7 +76,7 @@
 
 .label_Icon{
     position: absolute;
-    bottom:16px;
+    bottom:10px;
     left: 8px;
     color: rgb(192, 192, 192);
 }
@@ -102,7 +102,7 @@
 
 .register>p{
     text-align: center;
-    margin:10px ;   
+    margin:8px ;   
     color : white; 
 }
 
@@ -111,7 +111,10 @@
     font-weight: 300;
 }
 
-.register_Switch>a{
+.register_Switch>button{
+    background: none;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
     color: #39B54A;
     font-weight: bold;

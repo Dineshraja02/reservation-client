@@ -2,9 +2,15 @@ import React from 'react';
 import "./sidebar.css";
 import {Icon} from "@iconify/react";
 import { SidebarData } from './sidebarData';
+import { useNavigate } from 'react-router-dom';
 
 
 const Sidebar = () => {
+    const navigate=useNavigate();
+    const signout= async () =>{
+       sessionStorage.clear();
+        navigate("/");
+    }
     return (
         <div className='sidebar'>
             <ul className='sidebarList'>
@@ -16,13 +22,13 @@ const Sidebar = () => {
                  return<li key={key} 
                         className='row'
                         id={window.location.pathname === val.link ? "active" : ""}
-                        onClick={()=>{window.location.pathname= val.link}}>
+                        onClick={()=>{navigate(val.link)}}>
                      <div id="icon">{val.icon}</div>
                      <div id="title">{val.title}</div>
                      </li>
              })}
              </div>
-             <button className="sidebar_Signout"> Sign out</button>
+             <button className="sidebar_Signout" onClick={signout}> Sign out</button>
             </ul>
         </div>
     )

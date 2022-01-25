@@ -137,8 +137,11 @@
     font-weight: 300;
 }
 
-.register_Switch>a{
+.register_Switch>button{
     text-decoration: none;
     color: #39B54A;
     font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

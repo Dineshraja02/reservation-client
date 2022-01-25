@@ -3,8 +3,10 @@ import {Icon} from "@iconify/react";
 import "./register.css";
 import validateInfo from './validateForm';
 import useRegisterForm from './useRegisterForm';
+import { useNavigate } from 'react-router-dom';
 
 const Register = (props) => {
+    const navigate=useNavigate();
     const {handleChange,handleSubmit,errors,values}=useRegisterForm(validateInfo,props)
     return (
         <div className='register_page'>
@@ -69,8 +71,8 @@ const Register = (props) => {
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
                 <button type="submit"
-                className="register_Submit">Sign In</button>
-                <p className='register_Switch'>Already have a Account?<a href="/">Login</a></p>
+                className="register_Submit">Sign Up</button>
+                <p className='register_Switch'>Already have a Account?<button onClick={()=>navigate("/")}>Register</button></p>
                 </form>
     </div>
     )
