@@ -8,7 +8,7 @@ const useBookingForm = (validateInfo) => {
     const token= Date.now()+Math.random();
     const tokenNum=Math.round(token);
     const ticket=tokenNum.toString();
-    const API_URL = "http://localhost:3001/reservation/book"
+    const API_URL = "https://reservation-appp.herokuapp.com/reservation/book"
     const [values,setValues] = useState({
         name:"",
         age:"",

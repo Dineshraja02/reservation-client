@@ -10,7 +10,7 @@ const Ticketbooking = () => {
     const [info,setInfo]=useState([1]);
     const getInfo= async () =>{
         try{
-          const res = await axios.get('http://localhost:3001/reservation/availticket');
+          const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/availticket');
           setInfo(res.data);
         }catch(err){
              console.log(err);

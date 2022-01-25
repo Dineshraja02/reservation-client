@@ -40,7 +40,7 @@ const Ticketdetails = () => {
     
     const getInfo= async () =>{
         try{
-          const res = await axios.get('http://localhost:3001/reservation/getbooked');
+          const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/getbooked');
           setInfo(res.data);
         }catch(err){
              console.log(err);
@@ -48,7 +48,7 @@ const Ticketdetails = () => {
     }
     const getRac= async () =>{
         try{
-          const res = await axios.get('http://localhost:3001/reservation/racticket');
+          const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/racticket');
           setRac(res.data);
         }catch(err){
              console.log(err);
@@ -56,7 +56,7 @@ const Ticketdetails = () => {
     }
     const getwaiting= async () =>{
         try{
-          const res = await axios.get('http://localhost:3001/reservation/waiting');
+          const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/waiting');
           setWaiting(res.data);
         }catch(err){
              console.log(err);
@@ -64,7 +64,7 @@ const Ticketdetails = () => {
     }
     const getchild= async () =>{
       try{
-        const res = await axios.get('http://localhost:3001/reservation/child');
+        const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/child');
         setChild(res.data);
       }catch(err){
            console.log(err);
@@ -72,7 +72,7 @@ const Ticketdetails = () => {
   }
   const getavailConfirm= async () =>{
     try{
-      const res = await axios.get('http://localhost:3001/reservation/availconfirm');
+      const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/availconfirm');
       setAvailConfirm(res.data);
     }catch(err){
          console.log(err);
@@ -80,7 +80,7 @@ const Ticketdetails = () => {
 }
 const getavailRac= async () =>{
   try{
-    const res = await axios.get('http://localhost:3001/reservation/availrac');
+    const res = await axios.get('https://reservation-appp.herokuapp.com/reservation/availrac');
     setAvailRac(res.data);
   }catch(err){
        console.log(err);

@@ -6,7 +6,7 @@ import {useEffect, useState} from 'react';
 
 const useCancelingForm = (validateInfo) => {
     // let navigate=useNavigate();
-    const API_URL = "http://localhost:3001/reservation/cancel"
+    const API_URL = "https://reservation-appp.herokuapp.com/reservation/cancel"
     const [values,setValues] = useState({
         ticket_no:""
     });
