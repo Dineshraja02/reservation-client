@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./pages/login/login";
+import Register from "./pages/register/register";
+import Ticketbooking from "./pages/ticketbooking/ticketbooking";
+import Ticketcancel from "./pages/ticketcancel/ticketcancel";
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Ticketdetails from "./pages/ticketdetails/ticketdetails";
+import AuthRoute from "./authRoute";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>} />
+        <Route exact path='/login' element={<Login/>} />
+        <Route exact path='/register' element={<Register/>} />
+        <Route exact path='/booking' element={<AuthRoute><Ticketbooking/></AuthRoute>} />
+        <Route exact path='/cancel' element={<AuthRoute><Ticketcancel/></AuthRoute>}/>
+        <Route exact path='/details' element={<AuthRoute><Ticketdetails/></AuthRoute>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 
